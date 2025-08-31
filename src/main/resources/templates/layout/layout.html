@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet"
+        th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+  <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE">Layout Page</title>
+  <th:block layout:fragment="head"></th:block>
+</head>
+<body>
+<div id="container" class="container min-vw-100">
+  <div id="header" class="row" >
+    <!-- Header -->
+    <th:block th:replace="~{fragments/header :: header}">
+      <div>Header Placeholder</div>
+    </th:block>
+  </div>
+  <div class="row" id="sidebar-left">
+    <div class="col-sm-2" >
+      <!-- Left Sidebar -->
+      <th:block th:replace="~{fragments/side :: side}">
+        <div>Side Placeholder</div>
+      </th:block>
+    </div>
+    <div id="content" class="col-sm" style="min-height: 600px">
+      <div class="container-fluid">
+        <th:block layout:fragment="content">
+        </th:block>
+      </div>
+    </div>
+  </div>
+  <hr class="border border-primary border-1 opacity-75">
+
+  <div id="footer" class="row">
+    <!-- footer -->
+    <th:block th:replace="~{fragments/footer :: footer}">
+      <div>Footer Placeholder</div>
+    </th:block>
+  </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script th:src="@{/webjars/jquery/jquery.slim.min.js}"></script>
+<script
+    th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
+
+<th:block layout:fragment="script">
+
+</th:block>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <statusListener class="ch.qos.logback.core.status.NopStatusListener" />
+  <!-- Appenders -->
+  <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{72} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- Application Loggers -->
+  <logger name="org.fp024.mvcpractice" level="info" />
+
+  <!-- 3rdparty Loggers -->
+  <logger name="org.springframework.core" level="info" />
+  <logger name="org.springframework.beans" level="info" />
+  <logger name="org.springframework.context" level="info" />
+  <logger name="org.springframework.web" level="info" />
+
+  <!-- Root Logger -->
+  <root level="warn">
+    <appender-ref ref="console" />
+  </root>
+
+</configuration>

@@ -1,0 +1,19 @@
+{
+  "name": "init-project-for-vscode-java-environment",
+  "version": "1.0.0",
+  "type": "module",
+  "private": "true",
+  "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "format": "prettier --write \"./**/*.{html,css,js,json}\"",
+    "add-javac-parameters-option": "add-javac-parameters-option",
+    "copy-mockito-jar-maven": "node scripts/runMavenWrapper.js dependency:copy@copy-mockito-agent",
+    "init-test-jvm-options": "init-test-jvm-options",
+    "init-project": "pnpm run add-javac-parameters-option && pnpm run copy-mockito-jar-maven && pnpm run init-test-jvm-options"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "vscode-java-setup-scripts": "github:fp024/vscode-java-setup-scripts#v0.1.0"
+  }
+}

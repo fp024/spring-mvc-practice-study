@@ -1,0 +1,14 @@
+version: "0.2"
+ignorePaths:
+  - tomcat-run.bat
+  - tomcat-run.sh
+  - mvnw.cmd
+  - mvnw
+dictionaryDefinitions: []
+dictionaries: []
+words:
+  - codehaus
+  - deployables
+  - mvcpractice
+ignoreWords: []
+import: []
