@@ -24,14 +24,10 @@ pnpm install
 pnpm init-project
 ```
 
-* 해당 공통 스크립트 프로젝트에 Maven은 적용하지않아서, mvn wrapper 실행 부분만 프로젝트의 scripts/이하에 NodeJs스크립트로 추가했다.
-  * Maven 관련 기능도 통합을 할 예정이다. 😅
-
-
 
 ## 웹 서버 실행
 
-maven-cargo-plugin를 붙인 상태여서, 
+[cargo-maven3-plugin](https://codehaus-cargo.github.io/cargo/Maven+3+Plugin.html)를 붙인 상태여서, 
 
-tomcat-run.bat 또는 tomcat-run.sh를 실행하면 바로 웹 프로젝트가 시작되도록 설정했다.
+[tomcat-run.bat](tomcat-run.bat) 또는 [tomcat-run.sh](tomcat-run.sh)를 실행하면 바로 웹 프로젝트가 시작되도록 설정했다.
 
