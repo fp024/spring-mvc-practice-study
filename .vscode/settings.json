@@ -13,17 +13,15 @@
     "editor.formatOnSave": true
   },
   "java.debug.settings.onBuildFailureProceed": true,
-
   // 💡윈도우에서는 Git Bash대신 CMD를 쓰는게 낫겠다. 
   //    git-bash 환경에서 Cargo를 실행하면 웹 경로를 잘 못찾는 것 같다.
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
-
-  "spring-boot.ls.problem.version-validation.UPDATE_LATEST_MINOR_VERSION": "IGNORE",  
+  "spring-boot.ls.problem.version-validation.UPDATE_LATEST_MINOR_VERSION": "IGNORE",
   // 💡vscode-java-test가 build.gradle의 test 테스크에 설정한 javaagent 설정을 인식하지 못해서 수동설정해야한다.
   //    이를 위해 pnpm script를 추가했고 "pnpm run init-test-jvm-options" 실행으로 다음 설정을 자동화할 수 있다.
   "java.test.config": {
     "vmArgs": [
-      "-javaagent:${workspaceFolder}/javaagent-libs/mockito-core-5.19.0.jar",
+      "-javaagent:${workspaceFolder}/javaagent-libs/mockito-core-5.20.0.jar",
       "-Xshare:off"
     ]
   }

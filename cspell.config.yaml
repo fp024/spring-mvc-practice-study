@@ -9,6 +9,8 @@ dictionaries: []
 words:
   - codehaus
   - deployables
+  - fileset
+  - filesets
   - mvcpractice
 ignoreWords: []
 import: []
