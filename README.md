@@ -20,6 +20,8 @@ VSCode 환경에서 좀 더 편하게 사용할 수 있도록 NodeJS 스크립�
   * https://github.com/fp024/vscode-java-setup-scripts
 
 ```bash
+# Node 25의 경우는 npm install -g corepack을 먼저 실행해준다.
+corepack enable
 pnpm install
 pnpm init-project
 ```
