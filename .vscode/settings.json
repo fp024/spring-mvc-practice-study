@@ -24,7 +24,7 @@
   //    이를 위해 pnpm script를 추가했고 "pnpm run init-test-jvm-options" 실행으로 다음 설정을 자동화할 수 있다.
   "java.test.config": {
     "vmArgs": [
-      "-javaagent:${workspaceFolder}/javaagent-libs/mockito-core-5.20.0.jar",
+      "-javaagent:${workspaceFolder}/javaagent-libs/mockito-core-5.21.0.jar",
       "-Xshare:off"
     ]
   }
