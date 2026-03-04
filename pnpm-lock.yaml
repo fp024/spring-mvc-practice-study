@@ -9,36 +9,33 @@ importers:
   .:
     devDependencies:
       prettier:
-        specifier: ^3.8.0
-        version: 3.8.0
+        specifier: ^3.8.1
+        version: 3.8.1
       vscode-java-setup-scripts:
         specifier: github:fp024/vscode-java-setup-scripts#v0.1.0
-        version: https://codeload.github.com/fp024/vscode-java-setup-scripts/tar.gz/e4ef9235e850d3c46fa14414582ff38d2410654a
+        version: https://codeload.github.com/fp024/vscode-java-setup-scripts/tar.gz/6bd109fbfc93a88efde24b233d7a7cb09c89e395
 
 packages:
 
   array-timsort@1.0.3:
     resolution: {integrity: sha512-/+3GRL7dDAGEfM6TseQk/U+mi18TU2Ms9I3UlLdUMhz2hbvGNTKdj9xniwXfUqgYhHxRx0+8UnKkvlNwVU+cWQ==}
 
-  comment-json@4.5.1:
-    resolution: {integrity: sha512-taEtr3ozUmOB7it68Jll7s0Pwm+aoiHyXKrEC8SEodL4rNpdfDLqa7PfBlrgFoCNNdR8ImL+muti5IGvktJAAg==}
+  comment-json@4.6.2:
+    resolution: {integrity: sha512-R2rze/hDX30uul4NZoIZ76ImSJLFxn/1/ZxtKC1L77y2X1k+yYu1joKbAtMA2Fg3hZrTOiw0I5mwVMo0cf250w==}
     engines: {node: '>= 6'}
-
-  core-util-is@1.0.3:
-    resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
 
   esprima@4.0.1:
     resolution: {integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==}
     engines: {node: '>=4'}
     hasBin: true
 
-  prettier@3.8.0:
-    resolution: {integrity: sha512-yEPsovQfpxYfgWNhCfECjG5AQaO+K3dp6XERmOepyPDVqcJm+bjyCVO3pmU+nAPe0N5dDvekfGezt/EIiRe1TA==}
+  prettier@3.8.1:
+    resolution: {integrity: sha512-UOnG6LftzbdaHZcKoPFtOcCKztrQ57WkHDeRD9t/PTQtmT0NHSeWWepj6pS0z/N7+08BHFDQVUrfmfMRcZwbMg==}
     engines: {node: '>=14'}
     hasBin: true
 
-  vscode-java-setup-scripts@https://codeload.github.com/fp024/vscode-java-setup-scripts/tar.gz/e4ef9235e850d3c46fa14414582ff38d2410654a:
-    resolution: {tarball: https://codeload.github.com/fp024/vscode-java-setup-scripts/tar.gz/e4ef9235e850d3c46fa14414582ff38d2410654a}
+  vscode-java-setup-scripts@https://codeload.github.com/fp024/vscode-java-setup-scripts/tar.gz/6bd109fbfc93a88efde24b233d7a7cb09c89e395:
+    resolution: {tarball: https://codeload.github.com/fp024/vscode-java-setup-scripts/tar.gz/6bd109fbfc93a88efde24b233d7a7cb09c89e395}
     version: 0.1.0
     engines: {node: '>=22.17.0'}
     hasBin: true
@@ -47,18 +44,15 @@ snapshots:
 
   array-timsort@1.0.3: {}
 
-  comment-json@4.5.1:
+  comment-json@4.6.2:
     dependencies:
       array-timsort: 1.0.3
-      core-util-is: 1.0.3
       esprima: 4.0.1
-
-  core-util-is@1.0.3: {}
 
   esprima@4.0.1: {}
 
-  prettier@3.8.0: {}
+  prettier@3.8.1: {}
 
-  vscode-java-setup-scripts@https://codeload.github.com/fp024/vscode-java-setup-scripts/tar.gz/e4ef9235e850d3c46fa14414582ff38d2410654a:
+  vscode-java-setup-scripts@https://codeload.github.com/fp024/vscode-java-setup-scripts/tar.gz/6bd109fbfc93a88efde24b233d7a7cb09c89e395:
     dependencies:
-      comment-json: 4.5.1
+      comment-json: 4.6.2
