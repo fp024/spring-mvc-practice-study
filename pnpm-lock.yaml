@@ -13,7 +13,7 @@ importers:
         version: 3.8.1
       vscode-java-setup-scripts:
         specifier: github:fp024/vscode-java-setup-scripts#v0.1.0
-        version: https://codeload.github.com/fp024/vscode-java-setup-scripts/tar.gz/6bd109fbfc93a88efde24b233d7a7cb09c89e395
+        version: https://codeload.github.com/fp024/vscode-java-setup-scripts/tar.gz/43187373a41449782bac6681014b396cc08fbff3
 
 packages:
 
@@ -34,8 +34,8 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
-  vscode-java-setup-scripts@https://codeload.github.com/fp024/vscode-java-setup-scripts/tar.gz/6bd109fbfc93a88efde24b233d7a7cb09c89e395:
-    resolution: {tarball: https://codeload.github.com/fp024/vscode-java-setup-scripts/tar.gz/6bd109fbfc93a88efde24b233d7a7cb09c89e395}
+  vscode-java-setup-scripts@https://codeload.github.com/fp024/vscode-java-setup-scripts/tar.gz/43187373a41449782bac6681014b396cc08fbff3:
+    resolution: {tarball: https://codeload.github.com/fp024/vscode-java-setup-scripts/tar.gz/43187373a41449782bac6681014b396cc08fbff3}
     version: 0.1.0
     engines: {node: '>=22.17.0'}
     hasBin: true
@@ -53,6 +53,6 @@ snapshots:
 
   prettier@3.8.1: {}
 
-  vscode-java-setup-scripts@https://codeload.github.com/fp024/vscode-java-setup-scripts/tar.gz/6bd109fbfc93a88efde24b233d7a7cb09c89e395:
+  vscode-java-setup-scripts@https://codeload.github.com/fp024/vscode-java-setup-scripts/tar.gz/43187373a41449782bac6681014b396cc08fbff3:
     dependencies:
       comment-json: 4.6.2
