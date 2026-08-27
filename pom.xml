@@ -17,7 +17,7 @@
 
     <spring.version>6.2.19</spring.version>
     <aspectj.version>1.9.25.1</aspectj.version>
-    <logback.version>1.6.2</logback.version>
+    <logback.version>1.6.3</logback.version>
 
     <jakarta-inject.version>2.0.1</jakarta-inject.version>
     <jakarta-servlet.version>6.1.0</jakarta-servlet.version>
