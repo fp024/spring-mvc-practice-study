@@ -9,8 +9,21 @@ dictionaries: []
 words:
   - codehaus
   - deployables
+  - Dskip
+  - errorlevel
   - fileset
   - filesets
+  - FREEPDB
+  - gvenzl
+  - healthcheck
   - mvcpractice
+  - oradata
+  - Plinux
+  - SETLOCAL
+  - SQLCODE
+  - SQLERROR
+  - sqlplus
+  - temurin
+  - webapps
 ignoreWords: []
 import: []

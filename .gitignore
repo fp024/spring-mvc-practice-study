@@ -57,3 +57,6 @@ coverage
 
 # vscode-java-test에서 사용할 Java Agent 라이브러리 보관 디렉토리
 /javaagent-libs/
+
+# 자동생성된 툴체인 설정파일
+toolchains.xml

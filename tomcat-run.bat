@@ -7,7 +7,7 @@ FOR /F "tokens=1,* delims==" %%A IN ('findstr /V /R "^[#]" cargo.properties ^| f
 @ECHO ### Tomcat %cargo_tomcat_version% Run ... ###
 
 :: Maven 명령어 실행
-mvn clean verify org.codehaus.cargo:cargo-maven3-plugin:run ^
+CALL .\mvnw.cmd -t .\toolchains.xml clean verify org.codehaus.cargo:cargo-maven3-plugin:run ^
   -DskipTests ^
   -DcargoContextPath=%cargo_context_path% ^
   -Dcargo.jvmargs="%cargo_jvmargs%" ^

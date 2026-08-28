@@ -1,0 +1,43 @@
+services:
+  oracle-free:
+    image: gvenzl/oracle-free:23-slim
+    container_name: ${APP_NAME}-oracle_free_23c
+    environment:
+      ORACLE_PASSWORD: sys_ex
+      APP_USER: spring_db
+      APP_USER_PASSWORD: spring_db
+      TZ: Asia/Seoul
+    ports:
+      - "1521:1521"
+    volumes:
+      - oracle-data:/opt/oracle/oradata
+      - ./docker/init-scripts:/container-entrypoint-initdb.d
+      - ./docker/sql-scripts:/opt/oracle/scripts
+    healthcheck:
+      test: ["CMD", "healthcheck.sh"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+      start_interval: 5s
+
+  web-tomcat:
+    image: tomcat:11.0-jdk21-temurin
+    container_name: ${APP_NAME}-tomcat11
+    entrypoint: sh -c "mkdir -p /upload /upload/temp && catalina.sh run"
+    depends_on:
+      oracle-free:
+        condition: service_healthy
+    environment:
+      TZ: Asia/Seoul
+      JDBC_URL: jdbc:oracle:thin:@//oracle-free:1521/FREEPDB1
+      JDBC_USERNAME: spring_db
+      JDBC_PASSWORD: spring_db
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./target/${APP_NAME}.war:/usr/local/tomcat/webapps/ROOT.war:ro
+      - ./docker/web-upload:/upload
+
+volumes:
+  oracle-data:
