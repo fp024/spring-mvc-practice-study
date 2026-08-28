@@ -63,3 +63,7 @@ toolchains.xml
 
 # 커스텀 환경변수 프로퍼티 제외
 setenv-custom.properties
+
+# .env files
+.env.local
+.env.*.local
