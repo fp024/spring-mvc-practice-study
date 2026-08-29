@@ -103,6 +103,28 @@ OpenJDK 64-Bit Server VM Temurin-21.0.12+8 (..., mixed mode, sharing)
 `@Mock` 없이 `@InjectMocks` 만 쓰는 현재 저장소의 `HomeControllerStandaloneTests`
 같은 테스트도 예외가 아니다.
 
+> **참고: `@InjectMocks` 는 mock 을 만들지 않는다.**
+> 이름 때문에 오해하기 쉽지만, `@InjectMocks` 가 하는 일은 **대상 객체를 실물로 생성한 뒤
+> 같은 테스트 클래스에 선언된 `@Mock`/`@Spy` 필드를 주입** 하는 것이다.
+> 대상 자체는 mock 이 아니고, 주입할 `@Mock` 이 없으면 아무것도 주입되지 않는다.
+> 실제로 확인해 보면 이렇다.
+>
+> ```text
+> [case1] @InjectMocks 만 있을 때
+>         target        = InjectProbe$Target   ← 실물 클래스 (mock 서브클래스가 아님)
+>         isMock(target)= false
+>         target.call() = "dep is null"        ← 주입된 것이 없음
+>
+> [case2] @Mock 이 함께 있을 때
+>         isMock(target)= false                ← 대상은 여전히 실물
+>         isMock(dep)   = true                 ← @Mock 필드만 mock 이고, 이것이 주입됨
+> ```
+>
+> 이 저장소의 `HomeController` 는 주입할 의존성이 아예 없어서, 해당 테스트는
+> **mock 을 하나도 만들지 않는다.** 그런데도 위 [case1] 처럼 경고는 그대로 나온다.
+> 부트스트랩 append 는 mock 생성 여부와 무관하게 Mockito 초기화 단계에서 일어나기 때문이다.
+> 즉 "우리는 mock 을 안 쓰니 상관없다" 는 판단은 성립하지 않는다.
+
 또한 이 경고는 CDS 를 "반드시 쓰라"고 강제해도 사라지지 않는다.
 
 ```console
