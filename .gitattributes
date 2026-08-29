@@ -1,0 +1,4 @@
+# 셸 스크립트가 CRLF로 체크아웃되면 리눅스에서 "bad interpreter: /bin/sh^M" 로 실행되지 않는다.
+# core.autocrlf 설정과 무관하게 항상 LF를 유지한다.
+*.sh text eol=lf
+mvnw text eol=lf
