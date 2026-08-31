@@ -9,6 +9,7 @@ dictionaries: []
 words:
   - aspectj
   - aspectjrt
+  - bytebuddy
   - classfile
   - codehaus
   - deployables

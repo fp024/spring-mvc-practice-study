@@ -55,8 +55,53 @@
     <cargo-maven3-plugin.version>1.10.28</cargo-maven3-plugin.version>
     <cargoContextPath>${project.artifactId}</cargoContextPath>
 
+    <!-- 명시적 의존성 관리 -->
+    <slf4j.version>2.0.18</slf4j.version>
+    <byte-buddy.version>1.18.3</byte-buddy.version>
+
   </properties>
 
+  <dependencyManagement>
+    <dependencies>
+      <!-- 
+        mockito-junit-jupiter가 아직 5.13.4 버전을 사용중인데,
+        일단 최신으로 올려두자!
+      -->
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>${junit.version}</version>
+      </dependency>
+      <!-- 
+        mockito, assertj에서 byte-buddy를 사용하는데, assertj가 최신임.. 😅 
+        이부분은 좀 해깔린다... mockito 버전에 맞춰서 내릴지 말지? 😅😅
+        Gemini 의견으로는... byte-buddy가 하위호환성을 잘 지키는 라이브러리라고 한다.
+        버전을 올려두는게 이득이라고 한다.👍
+      -->
+      <dependency>
+        <groupId>net.bytebuddy</groupId>
+        <artifactId>byte-buddy</artifactId>
+        <version>${byte-buddy.version}</version>
+      </dependency>
+      <!-- 
+        thymeleaf-layout-dialect가 아직 최신 버전을 사용하지 않고 있음 
+        최신으로 올림
+       -->
+      <dependency>
+        <groupId>org.thymeleaf</groupId>
+        <artifactId>thymeleaf</artifactId>
+        <version>${thymeleaf.version}</version>
+      </dependency>
+      <!-- 
+        slf4j 관련해서는 logback-classic이 사용하는 버전으로 기준을 맞춤
+      -->
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <dependencies>
     <!-- Spring -->
