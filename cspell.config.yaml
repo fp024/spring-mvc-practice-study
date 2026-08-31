@@ -9,6 +9,7 @@ dictionaries: []
 words:
   - codehaus
   - deployables
+  - Dmdep
   - Dskip
   - errorlevel
   - fileset
@@ -19,11 +20,14 @@ words:
   - mvcpractice
   - oradata
   - Plinux
+  - Premain
+  - retransform
   - SETLOCAL
   - SQLCODE
   - SQLERROR
   - sqlplus
   - temurin
   - webapps
+  - Xlog
 ignoreWords: []
 import: []

@@ -222,6 +222,7 @@
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
+          <release>${java.version}</release>
           <compilerArgs>
             <arg>-Xlint:all</arg>
           </compilerArgs>
@@ -305,6 +306,9 @@
             </deployable>
           </deployables>
         </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
