@@ -20,7 +20,7 @@ import org.thymeleaf.templatemode.TemplateMode;
 
 @Configuration
 @ComponentScan(
-    basePackages = "org.fp024.mvcpractice",
+    basePackages = {"org.fp024.mvcpractice", "org.fp024.mvcpractice.controller"},
     useDefaultFilters = false,
     includeFilters = {
       @ComponentScan.Filter(

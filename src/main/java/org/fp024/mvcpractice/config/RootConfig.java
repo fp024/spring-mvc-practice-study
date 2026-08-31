@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 
 @Configuration
 @ComponentScan(
-    basePackages = "org.fp024.mvcpractice",
+    basePackages = {"org.fp024.mvcpractice"},
     excludeFilters = {
       @ComponentScan.Filter(
           type = FilterType.ANNOTATION,

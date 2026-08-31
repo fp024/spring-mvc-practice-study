@@ -21,6 +21,27 @@
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "java.dependency.enableDependencyCheckup": false,
   "spring-boot.ls.problem.version-validation.UPDATE_LATEST_MINOR_VERSION": "IGNORE",
+  "maven.terminal.favorites": [  
+  {
+      "command": "clean test"
+    },
+    {
+      "command": "-DskipTests clean package"
+    },
+    {
+      "command": "-DskipTests clean prepare-package war:exploded"
+    },
+  ],
+  "rsp-ui.enableStartServerOnActivation": [
+    {
+      "id": "redhat.vscode-community-server-connector",
+      "name": "Community Server Connector",
+      "startOnActivation": true
+    }
+  ],
+  // Community Server Connector 및 톰캣 구동용 Java Home 설정
+  "rsp-ui.rsp.java.home": "C:\\JDK\\21",
+  //
   // 💡vscode-java-test가 build.gradle의 test 테스크에 설정한 javaagent 설정을 인식하지 못해서 수동설정해야한다.
   //    이를 위해 pnpm script를 추가했고 "pnpm run init-test-jvm-options" 실행으로 다음 설정을 자동화할 수 있다.
   "java.test.config": {

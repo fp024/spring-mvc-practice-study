@@ -17,6 +17,7 @@ words:
   - FREEPDB
   - gvenzl
   - healthcheck
+  - logback
   - mvcpractice
   - oradata
   - Plinux
@@ -28,6 +29,7 @@ words:
   - sqlplus
   - temurin
   - webapps
+  - webjars
   - Xlog
 ignoreWords: []
 import: []
