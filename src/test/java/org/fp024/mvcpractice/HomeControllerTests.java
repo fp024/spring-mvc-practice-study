@@ -31,7 +31,7 @@ class HomeControllerTests {
   @Test
   void home() throws Exception {
     mockMvc
-        .perform(get("/"))
+        .perform(get("/home"))
         .andDo(print())
         .andExpect(status().isOk())
         .andExpect(model().attributeExists("serverTime"))

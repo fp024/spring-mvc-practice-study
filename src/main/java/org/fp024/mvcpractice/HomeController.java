@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 
   /** Simply selects the home view to render by returning its name. */
-  @GetMapping(path = "/")
+  @GetMapping(path = "/home")
   public String home(Locale locale, Model model) {
     log.info("Welcome home! The client locale is {}.", locale);
 

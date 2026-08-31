@@ -13,6 +13,7 @@ import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @ExtendWith(MockitoExtension.class)
 class HomeControllerStandaloneTests {
@@ -23,13 +24,16 @@ class HomeControllerStandaloneTests {
 
   @BeforeEach
   void setUp() {
-    mockMvc = MockMvcBuilders.standaloneSetup(homeController).build();
+    mockMvc =
+        MockMvcBuilders.standaloneSetup(homeController)
+            .setViewResolvers(new InternalResourceViewResolver("/WEB-INF/views/", ".html"))
+            .build();
   }
 
   @Test
   void home() throws Exception {
     mockMvc
-        .perform(get("/"))
+        .perform(get("/home"))
         .andDo(print())
         .andExpect(status().isOk())
         .andExpect(model().attributeExists("serverTime"))
