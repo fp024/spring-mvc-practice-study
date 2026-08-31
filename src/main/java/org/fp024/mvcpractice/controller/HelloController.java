@@ -65,4 +65,10 @@ public class HelloController {
 
     model.addAttribute("dto", dto);
   }
+
+  @GetMapping("/ex6")
+  public void ex6(Model model) {
+    model.addAttribute("name", "Hong Gil Dong");
+    model.addAttribute("age", 16);
+  }
 }
