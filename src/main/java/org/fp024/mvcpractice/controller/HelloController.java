@@ -5,8 +5,10 @@ import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import org.fp024.mvcpractice.service.HelloService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Slf4j
 @Controller
@@ -40,5 +42,18 @@ public class HelloController {
     log.info("/sample/ex3Re");
 
     return "sample/ex3Result";
+  }
+
+  @GetMapping("/ex4")
+  public void ex4(
+      @RequestParam(name = "n1", defaultValue = "1") int num,
+      @RequestParam(name = "name") String name,
+      Model model) {
+    log.info("/sample/ex4");
+    log.info("num : {}", num);
+    log.info("name : {}", name);
+
+    model.addAttribute("num", num);
+    model.addAttribute("name", name);
   }
 }
