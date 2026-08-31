@@ -10,8 +10,10 @@
 
   <!-- Application Loggers -->
   <logger name="org.fp024.mvcpractice" level="info" />
+  <!-- 💡mybatis의 실행 쿼리 확인 정도는 mapper 인터페이스 패키지를 trance 레벨로 설정하면 된다. -->
+  <logger name="org.fp024.mvcpractice.mapper" level="trace" />
 
-  <!-- 3rdparty Loggers -->
+  <!-- 3rd party Loggers -->
   <logger name="org.springframework.core" level="info" />
   <logger name="org.springframework.beans" level="info" />
   <logger name="org.springframework.context" level="info" />

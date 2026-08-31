@@ -27,6 +27,7 @@ words:
   - jsessionid
   - logback
   - mvcpractice
+  - mybatis
   - ojdbc
   - oradata
   - Plinux
@@ -38,6 +39,7 @@ words:
   - SQLCODE
   - SQLERROR
   - sqlplus
+  - SYSDATE
   - temurin
   - ultraq
   - Wago
