@@ -25,4 +25,20 @@ public class HelloController {
   public String ex2() {
     return "sample/success";
   }
+
+  @GetMapping("/ex3")
+  public String ex3() {
+
+    log.info("/sample/ex3");
+
+    return "redirect:/sample/ex3re";
+  }
+
+  @GetMapping("/ex3re")
+  public String ex3Re() {
+
+    log.info("/sample/ex3Re");
+
+    return "sample/ex3Result";
+  }
 }
