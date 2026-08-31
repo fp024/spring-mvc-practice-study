@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Slf4j
 @Controller
@@ -70,5 +71,18 @@ public class HelloController {
   public void ex6(Model model) {
     model.addAttribute("name", "Hong Gil Dong");
     model.addAttribute("age", 16);
+  }
+
+  @GetMapping("/ex7")
+  public String ex7(RedirectAttributes rttr) {
+    rttr.addAttribute("name", "Hong");
+    rttr.addFlashAttribute("age", 16);
+
+    return "redirect:/sample/ex8";
+  }
+
+  @GetMapping("/ex8")
+  public void ex8() {
+    log.info("/sample/ex8");
   }
 }

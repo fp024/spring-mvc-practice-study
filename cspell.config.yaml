@@ -24,6 +24,7 @@ words:
   - Hikari
   - hikaricp
   - jquery
+  - jsessionid
   - logback
   - mvcpractice
   - ojdbc
@@ -32,6 +33,7 @@ words:
   - Premain
   - projectlombok
   - retransform
+  - rttr
   - SETLOCAL
   - SQLCODE
   - SQLERROR
