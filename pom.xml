@@ -356,7 +356,7 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
           <argLine>-javaagent:${org.mockito:mockito-core:jar} -Xshare:off</argLine>
-          <!-- <argLine>-XX:+EnableDynamicAgentLoading</argLine> -->
+          <!-- <argLine>-XX:+EnableDynamicAgentLoading -Xshare:off</argLine> -->
         </configuration>
       </plugin>
       <plugin>
