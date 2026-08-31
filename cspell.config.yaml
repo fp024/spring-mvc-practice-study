@@ -7,6 +7,9 @@ ignorePaths:
 dictionaryDefinitions: []
 dictionaries: []
 words:
+  - aspectj
+  - aspectjrt
+  - classfile
   - codehaus
   - deployables
   - Dmdep
@@ -17,19 +20,29 @@ words:
   - FREEPDB
   - gvenzl
   - healthcheck
+  - Hikari
+  - hikaricp
+  - jquery
   - logback
   - mvcpractice
+  - ojdbc
   - oradata
   - Plinux
   - Premain
+  - projectlombok
   - retransform
   - SETLOCAL
   - SQLCODE
   - SQLERROR
   - sqlplus
   - temurin
+  - ultraq
   - webapps
   - webjars
+  - webmvc
+  - Xlint
   - Xlog
+  - Xshare
+  - zaxxer
 ignoreWords: []
 import: []

@@ -25,6 +25,10 @@
     <!-- Lombok -->
     <lombok.version>1.18.46</lombok.version>
 
+    <!-- Database -->
+    <hikaricp.version>7.1.0</hikaricp.version>
+    <ojdbc17.version>23.26.3.0.0</ojdbc17.version>
+
     <!-- Thymeleaf -->
     <thymeleaf.version>3.1.5.RELEASE</thymeleaf.version>
     <thymeleaf-layout-dialect.version>4.0.1</thymeleaf-layout-dialect.version>
@@ -102,6 +106,19 @@
       <artifactId>jakarta.servlet-api</artifactId>
       <version>${jakarta-servlet.version}</version>
       <scope>provided</scope>
+    </dependency>
+
+    <!-- Database -->
+    <dependency>
+      <groupId>com.oracle.database.jdbc</groupId>
+      <artifactId>ojdbc17</artifactId>
+      <version>${ojdbc17.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.zaxxer</groupId>
+      <artifactId>HikariCP</artifactId>
+      <version>${hikaricp.version}</version>
     </dependency>
 
     <!-- Thymeleaf -->
@@ -225,6 +242,10 @@
           <release>${java.version}</release>
           <compilerArgs>
             <arg>-Xlint:all</arg>
+            <arg>-Xlint:-processing</arg>
+            <arg>-proc:full</arg>
+            <arg>-Xlint:-path</arg> <!-- bad path element 경고 무시 -->
+            <arg>-Xlint:-classfile</arg> <!-- 참조하는 클래스 파일 없음 경고 무시 -->
           </compilerArgs>
           <parameters>true</parameters> <!--https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-6.x#parameter-name-retention -->
           <showWarnings>true</showWarnings>
