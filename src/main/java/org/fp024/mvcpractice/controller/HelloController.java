@@ -3,6 +3,7 @@ package org.fp024.mvcpractice.controller;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
+import org.fp024.mvcpractice.dto.SampleDTO;
 import org.fp024.mvcpractice.service.HelloService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -55,5 +56,13 @@ public class HelloController {
 
     model.addAttribute("num", num);
     model.addAttribute("name", name);
+  }
+
+  @GetMapping("/ex5")
+  public void ex5(SampleDTO dto, Model model) {
+    log.info("/sample/ex5");
+    log.info("{}", dto);
+
+    model.addAttribute("dto", dto);
   }
 }
