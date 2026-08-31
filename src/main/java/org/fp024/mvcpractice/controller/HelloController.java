@@ -20,4 +20,9 @@ public class HelloController {
   public void ex1() {
     log.info("/sample/ex1");
   }
+
+  @GetMapping("/ex2")
+  public String ex2() {
+    return "sample/success";
+  }
 }
