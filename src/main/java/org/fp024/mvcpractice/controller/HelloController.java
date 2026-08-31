@@ -1,13 +1,13 @@
 package org.fp024.mvcpractice.controller;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.RequiredArgsConstructor;
+import lombok.ToString;
+import org.fp024.mvcpractice.service.HelloService;
 import org.springframework.stereotype.Controller;
 
-@Slf4j
 @Controller
+@RequiredArgsConstructor
+@ToString
 public class HelloController {
-
-  public HelloController() {
-    log.info("helloController constructor");
-  }
+  private final HelloService helloService;
 }
