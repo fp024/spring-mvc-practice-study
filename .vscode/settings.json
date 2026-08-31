@@ -39,6 +39,16 @@
       "startOnActivation": true
     }
   ],
+  // 자동 임포트 제외 설정 패키지 목록
+  "java.completion.filteredTypes": [
+    "java.awt.*",
+    "com.sun.*",
+    "sun.*",
+    "jdk.*",
+    "org.graalvm.*",
+    "io.micrometer.shaded.*",
+    "groovy.util.logging.Slf4j"
+  ],
   // Community Server Connector 및 톰캣 구동용 Java Home 설정
   "rsp-ui.rsp.java.home": "C:\\JDK\\21",
   //
