@@ -16,9 +16,11 @@
     <maven.compiler.target>${java.version}</maven.compiler.target>
 
     <spring.version>6.2.19</spring.version>
-    <aspectj.version>1.9.25.1</aspectj.version>
+
+    <!-- Logger -->
     <logback.version>1.6.3</logback.version>
 
+    <!-- Servlet -->
     <jakarta-inject.version>2.0.1</jakarta-inject.version>
     <jakarta-servlet.version>6.1.0</jakarta-servlet.version>
 
@@ -37,6 +39,9 @@
           https://central.sonatype.com/artifact/org.mybatis/mybatis-spring/versions
     -->
     <mybatis-spring.version>3.0.6</mybatis-spring.version>
+
+    <!-- AOP -->
+    <aspectj.version>1.9.25.1</aspectj.version>
 
     <!-- Thymeleaf -->
     <thymeleaf.version>3.1.5.RELEASE</thymeleaf.version>
@@ -134,6 +139,12 @@
       <artifactId>spring-tx</artifactId>
       <version>${spring.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aop</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
 
     <!-- Lombok -->
     <dependency>
@@ -146,7 +157,7 @@
     <!-- AspectJ -->
     <dependency>
       <groupId>org.aspectj</groupId>
-      <artifactId>aspectjrt</artifactId>
+      <artifactId>aspectjweaver</artifactId>
       <version>${aspectj.version}</version>
     </dependency>
 
