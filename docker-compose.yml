@@ -22,8 +22,8 @@ services:
       start_interval: 5s
 
   web-tomcat:
-    image: tomcat:11.0-jdk21-temurin
-    container_name: ${APP_NAME}-tomcat11
+    image: tomcat:10.1-jdk21-temurin
+    container_name: ${APP_NAME}-tomcat10_1
     entrypoint: sh -c "mkdir -p /upload /upload/temp && catalina.sh run"
     depends_on:
       oracle-free:
