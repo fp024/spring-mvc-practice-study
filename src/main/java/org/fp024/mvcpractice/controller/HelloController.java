@@ -23,10 +23,13 @@ public class HelloController {
   @GetMapping("/ex1")
   public void ex1() {
     log.info("/sample/ex1");
+    helloService.hello1();
   }
 
   @GetMapping("/ex2")
   public String ex2() {
+    log.info("/sample/ex2");
+    helloService.hello2("Hong Gil Dong");
     return "sample/success";
   }
 
