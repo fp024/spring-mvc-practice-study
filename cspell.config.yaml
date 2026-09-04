@@ -42,6 +42,7 @@ words:
   - SYSDATE
   - temurin
   - ultraq
+  - VARCHAR
   - Wago
   - webapps
   - webjars
