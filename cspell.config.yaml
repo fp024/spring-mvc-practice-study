@@ -9,9 +9,11 @@ dictionaries: []
 words:
   - aspectj
   - aspectjrt
+  - autoincrement
   - bytebuddy
   - classfile
   - codehaus
+  - DELFLAG
   - deployables
   - Dmdep
   - Dskip
@@ -33,6 +35,7 @@ words:
   - Plinux
   - Premain
   - projectlombok
+  - REGDATE
   - retransform
   - rttr
   - SETLOCAL
@@ -40,8 +43,10 @@ words:
   - SQLERROR
   - sqlplus
   - SYSDATE
+  - SYSTIMESTAMP
   - temurin
   - ultraq
+  - UPDATEDATE
   - VARCHAR
   - Wago
   - webapps
