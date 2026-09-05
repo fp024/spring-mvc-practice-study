@@ -10,6 +10,7 @@
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
     <link rel="stylesheet" th:href="@{/resources/css/style.css}" />
     <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE">Admin Panel</title>
+    <th:block layout:fragment="head"></th:block>
   </head>
   <body>
     <th:block th:replace="~{default/fragments/navbar :: navbar}">
@@ -22,12 +23,8 @@
       <th:block th:replace="~{default/fragments/sidebar :: sidebar}">
         <div>Sidebar Placeholder</div>
       </th:block>
-
-      <!-- Main Content -->
-      <!-- Sidebar + Content -->
-      <div class="main-wrapper">
-        <th:block layout:fragment="content"> </th:block>
-      </div>
+      <!-- Content -->
+      <th:block layout:fragment="content"> </th:block>
     </div>
 
     <!-- Footer -->
