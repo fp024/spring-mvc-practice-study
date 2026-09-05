@@ -1,6 +1,8 @@
 {
   "recommendations": [
     "vscjava.vscode-java-pack",
-    "redhat.vscode-xml"
+    "redhat.vscode-xml",
+    "hossaini.bootstrap-intellisense",
+    "ecmel.vscode-html-css"
   ]
 }

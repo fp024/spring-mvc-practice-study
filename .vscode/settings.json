@@ -7,14 +7,19 @@
     "editor.formatOnSave": false
   },
   "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
   "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
   "[javascript]": {
     "editor.formatOnSave": true
   },
+
+  "css.styleSheets": ["src/main/resources/**/*.css"],
+
   "java.debug.settings.onBuildFailureProceed": true,
   // 💡윈도우에서는 Git Bash대신 CMD를 쓰는게 낫겠다. 
   //    git-bash 환경에서 Cargo를 실행하면 웹 경로를 잘 못찾는 것 같다.
