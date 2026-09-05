@@ -2,6 +2,7 @@
   "recommendations": [
     "vscjava.vscode-java-pack",
     "redhat.vscode-xml",
+    "esbenp.prettier-vscode",
     "hossaini.bootstrap-intellisense",
     "ecmel.vscode-html-css"
   ]
