@@ -40,4 +40,12 @@ public class BoardController {
 
     return "/board/read";
   }
+
+  @GetMapping("/modify/{bno}")
+  public String modifyGET(@PathVariable("bno") Long bno) {
+    log.info("------------------------------");
+    log.info("board modify get");
+
+    return "/board/modify";
+  }
 }
