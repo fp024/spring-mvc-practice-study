@@ -63,6 +63,7 @@ public class RootConfig {
   SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
     SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
     sqlSessionFactoryBean.setDataSource(dataSource);
+    sqlSessionFactoryBean.setTypeAliasesPackage("org.fp024.mvcpractice.dto");
     sqlSessionFactoryBean.setMapperLocations(
         new PathMatchingResourcePatternResolver() //
             .getResources("classpath:mappers/**/*.xml"));
