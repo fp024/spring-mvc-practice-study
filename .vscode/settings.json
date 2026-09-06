@@ -18,7 +18,9 @@
     "editor.formatOnSave": true
   },
 
-  "css.styleSheets": ["src/main/resources/**/*.css"],
+  "css.styleSheets": [
+    "src/main/resources/**/*.css"
+  ],
 
   "java.debug.settings.onBuildFailureProceed": true,
   // 💡윈도우에서는 Git Bash대신 CMD를 쓰는게 낫겠다. 
@@ -26,8 +28,8 @@
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "java.dependency.enableDependencyCheckup": false,
   "spring-boot.ls.problem.version-validation.UPDATE_LATEST_MINOR_VERSION": "IGNORE",
-  "maven.terminal.favorites": [  
-  {
+  "maven.terminal.favorites": [
+    {
       "command": "clean test"
     },
     {
@@ -35,7 +37,7 @@
     },
     {
       "command": "-DskipTests clean prepare-package war:exploded"
-    },
+    }
   ],
   "rsp-ui.enableStartServerOnActivation": [
     {
@@ -59,7 +61,7 @@
   //
   //
   // ✨ Red Hat Java Language Support 확장 설정
-  // 이 워크스페이스는 Red Hat Java Language Support 확장의 lomok 지원을 사용해보자!  
+  // 이 워크스페이스는 Red Hat Java Language Support 확장의 lomok 지원을 사용해보자!
   "java.jdt.ls.lombokSupport.enabled": true,
   // 나중에 User 설정으로 올릴지 생각해보자! 유저 설정에는 Xmx 옵션이 2G이고, lombok도 수동으로 javaagent 설정이 되어있음.
   "java.jdt.ls.vmargs": "-Dfile.encoding=utf-8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx4G -Xms512m",
@@ -72,5 +74,5 @@
       "-javaagent:${workspaceFolder}/javaagent-libs/mockito-core-5.23.0.jar",
       "-Xshare:off"
     ]
-  },
+  }
 }
