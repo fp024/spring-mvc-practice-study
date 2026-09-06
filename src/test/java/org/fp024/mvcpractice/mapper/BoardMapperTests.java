@@ -24,7 +24,10 @@ class BoardMapperTests {
 
     int insertCount = boardMapper.insert(boardDTO);
 
-    log.info("----------");
+    log.info("--------------------");
     log.info("insertCount: {}", insertCount);
+
+    log.info("====================");
+    log.info("BNO: {}", boardDTO.getBno());
   }
 }

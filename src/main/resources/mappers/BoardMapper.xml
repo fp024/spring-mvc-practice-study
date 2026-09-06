@@ -2,8 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.fp024.mvcpractice.mapper.BoardMapper">
 
-  <insert id="insert">
+  <insert id="insert" 
+          useGeneratedKeys="true" keyProperty="bno" keyColumn="BNO">
     INSERT INTO TBL_BOARD (title, writer, content)
     VALUES (#{title}, #{writer}, #{content})
   </insert>
+
 </mapper>
