@@ -4,8 +4,39 @@
 
   <insert id="insert" 
           useGeneratedKeys="true" keyProperty="bno" keyColumn="BNO">
-    INSERT INTO TBL_BOARD (title, writer, content)
+    INSERT INTO TBL_BOARD (TITLE, WRITER, CONTENT)
     VALUES (#{title}, #{writer}, #{content})
   </insert>
+
+  <select id="selectOne" resultType="BoardDTO">
+    SELECT * 
+      FROM TBL_BOARD
+     WHERE BNO = #{bno}
+  </select>
+
+  <update id="remove" >
+    UPDATE TBL_BOARD
+       SET DELFLAG = true
+     WHERE BNO = #{bno}
+  </update>
+
+  <update id="update">
+    UPDATE TBL_BOARD
+       SET TITLE = #{title}
+         , CONTENT = #{content}
+         , UPDATEDATE = LOCALTIMESTAMP
+         , DELFLAG = #{delFlag}
+     WHERE BNO = #{bno}
+  </update>
+
+  <select id="list" resultType="BoardDTO">
+    SELECT BNO
+         , TITLE
+         , WRITER
+         , REGDATE
+      FROM TBL_BOARD
+     WHERE DELFLAG = false  
+     ORDER BY BNO DESC
+  </select>
 
 </mapper>

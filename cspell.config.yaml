@@ -27,6 +27,7 @@ words:
   - hikaricp
   - jquery
   - jsessionid
+  - LOCALTIMESTAMP
   - logback
   - mvcpractice
   - mybatis
