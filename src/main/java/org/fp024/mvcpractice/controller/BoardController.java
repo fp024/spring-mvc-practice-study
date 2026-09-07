@@ -38,7 +38,7 @@ public class BoardController {
     log.info("------------------------------");
     log.info("board read");
 
-    return "/board/read";
+    return "board/read";
   }
 
   @GetMapping("/modify/{bno}")
@@ -46,7 +46,7 @@ public class BoardController {
     log.info("------------------------------");
     log.info("board modify get");
 
-    return "/board/modify";
+    return "board/modify";
   }
 
   @PostMapping("/modify")
