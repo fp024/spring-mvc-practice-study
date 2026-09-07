@@ -15,7 +15,27 @@
           <div class="card shadow mb-4">
             <div class="card-header py-3">
               <h6 class="m-0 fw-bold text-primary">Board List</h6>
-              <div th:text="${list}"></div>
+            </div>
+
+            <div class="card-body">
+              <table class="table table-bordered" id="dataTable">
+                <thead>
+                  <tr>
+                    <th>Bno</th>
+                    <th>Title</th>
+                    <th>Writer</th>
+                    <th>RegDate</th>
+                  </tr>
+                </thead>
+                <tbody class="tbody">
+                  <tr th:each="board : ${list}">
+                    <th scope="row">[[${board.bno}]]</th>
+                    <td>[[${board.title}]]</td>
+                    <td>[[${board.writer}]]</td>
+                    <td>[[${#temporals.format(board.regDate, 'yyyy-MM-dd')}]]</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
