@@ -9,6 +9,7 @@ dictionaries: []
 words:
   - aspectj
   - aspectjrt
+  - aspectjweaver
   - autoincrement
   - bytebuddy
   - classfile

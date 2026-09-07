@@ -61,16 +61,18 @@
     <!-- Maven Plugin Version -->
     <maven-toolchains-plugin.version>3.3.0</maven-toolchains-plugin.version>
     <maven-clean-plugin.version>3.5.0</maven-clean-plugin.version>
-    <maven-compiler-plugin.version>3.15.0</maven-compiler-plugin.version>
+    <maven-compiler-plugin.version>3.16.0</maven-compiler-plugin.version>
     <maven-war-plugin.version>3.5.1</maven-war-plugin.version>
-    <maven-surefire-plugin.version>3.5.6</maven-surefire-plugin.version>
+    <maven-surefire-plugin.version>3.6.0</maven-surefire-plugin.version>
 
     <!-- Cargo Maven3 Plugin -->
     <cargo-maven3-plugin.version>1.10.28</cargo-maven3-plugin.version>
     <cargoContextPath>${project.artifactId}</cargoContextPath>
 
     <!-- 명시적 의존성 관리 -->
+    <!-- logback-classic 디펜던시 기준을 따름 -->
     <slf4j.version>2.0.18</slf4j.version>
+    <!-- mockito 또는 assertj의 디펜던시 중에 최신 버전 기준을 따름 -->
     <byte-buddy.version>1.18.3</byte-buddy.version>
 
   </properties>

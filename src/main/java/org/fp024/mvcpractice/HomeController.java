@@ -1,7 +1,6 @@
 package org.fp024.mvcpractice;
 
-import java.text.DateFormat;
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.Locale;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -18,14 +17,8 @@ public class HomeController {
   public String home(Locale locale, Model model) {
     log.info("Welcome home! The client locale is {}.", locale);
 
-    Date date = new Date();
-    DateFormat dateFormat =
-        DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+    model.addAttribute("serverTime", LocalDateTime.now());
 
-    String formattedDate = dateFormat.format(date);
-
-    model.addAttribute("serverTime", formattedDate);
-
-    return "home";
+    return "home_example/home";
   }
 }
