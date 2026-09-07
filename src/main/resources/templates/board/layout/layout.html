@@ -13,14 +13,14 @@
     <th:block layout:fragment="head"></th:block>
   </head>
   <body>
-    <th:block th:replace="~{default/fragments/navbar :: navbar}">
+    <th:block th:replace="~{board/fragments/navbar :: navbar}">
       <div>Navbar Placeholder</div>
     </th:block>
 
     <!-- Sidebar + Content -->
     <div class="main-wrapper">
       <!-- Sidebar -->
-      <th:block th:replace="~{default/fragments/sidebar :: sidebar}">
+      <th:block th:replace="~{board/fragments/sidebar :: sidebar}">
         <div>Sidebar Placeholder</div>
       </th:block>
       <!-- Main Content -->
@@ -30,7 +30,7 @@
     </div>
 
     <!-- Footer -->
-    <th:block th:replace="~{default/fragments/footer :: footer}"> </th:block>
+    <th:block th:replace="~{board/fragments/footer :: footer}"> </th:block>
 
     <script th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
     <th:block layout:fragment="script"> </th:block>
