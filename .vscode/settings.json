@@ -55,7 +55,8 @@
     "org.graalvm.*",
     "io.micrometer.shaded.*",
     "groovy.util.logging.Slf4j",
-    "groovy.transform.builder.Builder"
+    "groovy.transform.builder.Builder",
+    "ch.qos.logback.core.model.Model"
   ],
   // Community Server Connector 및 톰캣 구동용 Java Home 설정
   "rsp-ui.rsp.java.home": "C:\\JDK\\21",

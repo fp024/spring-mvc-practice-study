@@ -37,6 +37,6 @@ class HomeControllerStandaloneTests {
         .andDo(print())
         .andExpect(status().isOk())
         .andExpect(model().attributeExists("serverTime"))
-        .andExpect(view().name("home"));
+        .andExpect(view().name("home_example/home"));
   }
 }
