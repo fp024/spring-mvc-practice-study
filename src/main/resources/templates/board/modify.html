@@ -18,6 +18,7 @@
             </div>
 
             <div class="card-body">
+              <form id="actionForm" action="/board/modify" method="post"></form>
               <div class="float-end">
                 <button type="button" class="btn btn-info btnList">LIST</button>
                 <button type="button" class="btn btn-warning btnModify">MODIFY</button>
@@ -27,6 +28,42 @@
           </div>
         </div>
       </div>
+    </th:block>
+
+    <th:block layout:fragment="script">
+      <script type="text/javascript">
+        const formObj = document.querySelector("#actionForm");
+
+        document.querySelector(".btnModify").addEventListener(
+          "click",
+          () => {
+            formObj.action = "/board/modify";
+            formObj.method = "post";
+            formObj.submit();
+          },
+          false
+        );
+
+        document.querySelector(".btnList").addEventListener(
+          "click",
+          () => {
+            formObj.action = "/board/list";
+            formObj.method = "get";
+            formObj.submit();
+          },
+          false
+        );
+
+        document.querySelector(".btnRemove").addEventListener(
+          "click",
+          () => {
+            formObj.action = "/board/remove";
+            formObj.method = "post";
+            formObj.submit();
+          },
+          false
+        );
+      </script>
     </th:block>
   </body>
 </html>

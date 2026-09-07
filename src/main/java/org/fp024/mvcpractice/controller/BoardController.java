@@ -48,4 +48,19 @@ public class BoardController {
 
     return "/board/modify";
   }
+
+  @PostMapping("/modify")
+  public String modifyPOST() {
+    log.info("------------------------------");
+    log.info("board modify post");
+    return "redirect:/board/read/123";
+  }
+
+  @PostMapping("/remove")
+  public String remove() {
+    log.info("------------------------------");
+    log.info("board remove post");
+
+    return "redirect:/board/list";
+  }
 }
