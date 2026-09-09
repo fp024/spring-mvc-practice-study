@@ -6,6 +6,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.flash;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrl;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
@@ -23,7 +24,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @ExtendWith(MockitoExtension.class)
-class BoardControllerTests {
+class BoardControllerStandaloneTests {
   private MockMvc mockMvc;
 
   @Mock private BoardService boardService;
@@ -67,11 +68,20 @@ class BoardControllerTests {
 
   @Test
   void testRead() throws Exception {
+
+    BoardDTO boardDTO =
+        BoardDTO.builder()
+            .bno(123L) //
+            .build();
+
+    when(boardService.read(boardDTO.getBno())).thenReturn(boardDTO);
+
     mockMvc
-        .perform(get("/board/read/123"))
+        .perform(get("/board/read/{bno}", boardDTO.getBno()))
         .andDo(print())
         .andExpect(status().isOk())
-        .andExpect(view().name("board/read"));
+        .andExpect(view().name("board/read"))
+        .andExpect(model().attribute("board", boardDTO));
   }
 
   @Test

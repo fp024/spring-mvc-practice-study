@@ -27,4 +27,10 @@ public class BoardService {
 
     return dto.getBno();
   }
+
+  public BoardDTO read(Long bno) {
+    BoardDTO boardDTO = boardMapper.selectOne(bno);
+
+    return boardDTO;
+  }
 }

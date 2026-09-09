@@ -47,9 +47,13 @@ public class BoardController {
   }
 
   @GetMapping("/read/{bno}")
-  public String read(@PathVariable("bno") Long bno) {
+  public String read(@PathVariable("bno") Long bno, Model model) {
     log.info("------------------------------");
     log.info("board read");
+
+    BoardDTO dto = boardService.read(bno);
+
+    model.addAttribute("board", dto);
 
     return "board/read";
   }

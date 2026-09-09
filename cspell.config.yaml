@@ -4,6 +4,7 @@ ignorePaths:
   - tomcat-run.sh
   - mvnw.cmd
   - mvnw
+  - docs/**
 dictionaryDefinitions: []
 dictionaries: []
 words:
