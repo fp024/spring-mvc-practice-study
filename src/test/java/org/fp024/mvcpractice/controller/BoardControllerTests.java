@@ -1,12 +1,16 @@
 package org.fp024.mvcpractice.controller;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.flash;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrl;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
+import org.fp024.mvcpractice.dto.BoardDTO;
 import org.fp024.mvcpractice.service.BoardService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -81,10 +85,16 @@ class BoardControllerTests {
 
   @Test
   void testRegisterPost() throws Exception {
+    when(boardService.register(any(BoardDTO.class))).thenReturn(1L);
     mockMvc
-        .perform(post("/board/register"))
+        .perform(
+            post("/board/register")
+                .param("title", "테스트 제목")
+                .param("content", "테스트 내용")
+                .param("writer", "테스트 작성자"))
         .andDo(print())
         .andExpect(status().isFound())
+        .andExpect(flash().attribute("result", 1L))
         .andExpect(redirectedUrl("/board/list"));
   }
 

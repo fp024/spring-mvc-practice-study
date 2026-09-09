@@ -2,6 +2,7 @@ package org.fp024.mvcpractice.controller;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.fp024.mvcpractice.dto.BoardDTO;
 import org.fp024.mvcpractice.service.BoardService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 @RequestMapping("/board")
@@ -33,9 +35,14 @@ public class BoardController {
   }
 
   @PostMapping("/register")
-  public String registerPost() {
+  public String registerPost(BoardDTO dto, RedirectAttributes rttr) {
     log.info("------------------------------");
     log.info("board register post");
+
+    Long bno = boardService.register(dto);
+
+    rttr.addFlashAttribute("result", bno);
+
     return "redirect:/board/list";
   }
 
