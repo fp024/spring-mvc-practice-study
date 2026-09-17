@@ -25,7 +25,7 @@
     <jakarta-servlet.version>6.1.0</jakarta-servlet.version>
 
     <!-- Lombok -->
-    <lombok.version>1.18.46</lombok.version>
+    <lombok.version>1.18.48</lombok.version>
 
     <!-- Database -->
     <hikaricp.version>7.1.0</hikaricp.version>

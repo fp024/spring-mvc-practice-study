@@ -29,6 +29,7 @@ words:
   - hikaricp
   - jquery
   - jsessionid
+  - jvmargs
   - LOCALTIMESTAMP
   - logback
   - mvcpractice
