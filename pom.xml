@@ -66,7 +66,7 @@
     <maven-surefire-plugin.version>3.6.0</maven-surefire-plugin.version>
 
     <!-- Cargo Maven3 Plugin -->
-    <cargo-maven3-plugin.version>1.10.28</cargo-maven3-plugin.version>
+    <cargo-maven3-plugin.version>1.10.29</cargo-maven3-plugin.version>
     <cargoContextPath>${project.artifactId}</cargoContextPath>
 
     <!-- 명시적 의존성 관리 -->
