@@ -18,7 +18,7 @@
     <spring.version>6.2.19</spring.version>
 
     <!-- Logger -->
-    <logback.version>1.6.3</logback.version>
+    <logback.version>1.6.6</logback.version>
 
     <!-- Servlet -->
     <jakarta-inject.version>2.0.1</jakarta-inject.version>
@@ -32,7 +32,7 @@
     <ojdbc17.version>23.26.3.0.0</ojdbc17.version>
 
     <!-- ORM -->
-    <mybatis.version>3.5.19</mybatis.version>
+    <mybatis.version>3.6.0</mybatis.version>
     <!-- 
        💡mybatis-spring은 spring 버전에 따라 요구되는 버전이 다르다.
           https://mybatis.org/spring/ko/index.html
@@ -41,7 +41,7 @@
     <mybatis-spring.version>3.0.6</mybatis-spring.version>
 
     <!-- AOP -->
-    <aspectj.version>1.9.25.1</aspectj.version>
+    <aspectj.version>1.9.26</aspectj.version>
 
     <!-- Thymeleaf -->
     <thymeleaf.version>3.1.5.RELEASE</thymeleaf.version>
@@ -61,6 +61,7 @@
     <!-- Maven Plugin Version -->
     <maven-toolchains-plugin.version>3.3.0</maven-toolchains-plugin.version>
     <maven-clean-plugin.version>3.5.0</maven-clean-plugin.version>
+    <maven-dependency-plugin.version>3.11.0</maven-dependency-plugin.version>
     <maven-compiler-plugin.version>3.16.0</maven-compiler-plugin.version>
     <maven-war-plugin.version>3.5.1</maven-war-plugin.version>
     <maven-surefire-plugin.version>3.6.0</maven-surefire-plugin.version>
@@ -72,7 +73,7 @@
     <!-- 명시적 의존성 관리 -->
     <!-- logback-classic 디펜던시 기준을 따름 -->
     <!-- logback 디펜던시 버전 -->
-    <!-- https://central.sonatype.com/artifact/ch.qos.logback/logback-classic/1.6.3/dependencies -->
+    <!-- https://central.sonatype.com/artifact/ch.qos.logback/logback-classic/1.6.6/dependencies -->
     <slf4j.version>2.0.19</slf4j.version>
     <!-- mockito 또는 assertj의 디펜던시 중에 최신 버전 기준을 따름 -->
     <!-- https://central.sonatype.com/artifact/org.assertj/assertj-core/3.27.7/dependencies -->
@@ -298,6 +299,10 @@
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>${maven-clean-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>${maven-dependency-plugin.version}</version>
         </plugin>
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
