@@ -29,7 +29,7 @@
 
     <!-- Database -->
     <hikaricp.version>7.1.0</hikaricp.version>
-    <ojdbc17.version>23.26.3.0.0</ojdbc17.version>
+    <ojdbc17.version>23.26.4.0.0</ojdbc17.version>
 
     <!-- ORM -->
     <mybatis.version>3.6.0</mybatis.version>
@@ -41,7 +41,7 @@
     <mybatis-spring.version>3.0.6</mybatis-spring.version>
 
     <!-- AOP -->
-    <aspectj.version>1.9.26</aspectj.version>
+    <aspectj.version>1.9.27</aspectj.version>
 
     <!-- Thymeleaf -->
     <thymeleaf.version>3.1.5.RELEASE</thymeleaf.version>
@@ -64,10 +64,10 @@
     <maven-dependency-plugin.version>3.11.0</maven-dependency-plugin.version>
     <maven-compiler-plugin.version>3.16.0</maven-compiler-plugin.version>
     <maven-war-plugin.version>3.5.1</maven-war-plugin.version>
-    <maven-surefire-plugin.version>3.6.0</maven-surefire-plugin.version>
+    <maven-surefire-plugin.version>3.6.1</maven-surefire-plugin.version>
 
     <!-- Cargo Maven3 Plugin -->
-    <cargo-maven3-plugin.version>1.10.29</cargo-maven3-plugin.version>
+    <cargo-maven3-plugin.version>1.10.30</cargo-maven3-plugin.version>
     <cargoContextPath>${project.artifactId}</cargoContextPath>
 
     <cargo.container.id>tomcat10x</cargo.container.id>
